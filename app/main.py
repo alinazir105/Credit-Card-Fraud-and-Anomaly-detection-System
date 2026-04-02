@@ -9,7 +9,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "http://127.0.0.1:5173"
+        "http://127.0.0.1:5173",
+        "https://credit-card-fraud-and-anomaly-detec.vercel.app"
         ],
     allow_credentials=True,
     allow_methods=["*"],
