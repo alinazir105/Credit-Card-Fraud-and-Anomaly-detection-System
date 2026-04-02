@@ -149,7 +149,10 @@ function SectionCard({ title, subtitle, children }) {
 }
 
 export default function FraudDetectionFrontend() {
-  const [apiUrl, setApiUrl] = useState('http://127.0.0.1:8000/predict');
+  const [apiUrl, setApiUrl] = useState(
+    import.meta.env.VITE_API_URL ||
+    "https://credit-card-fraud-and-anomaly-detection.onrender.com/predict"
+  );
   const [formData, setFormData] = useState(defaultValues);
   const [jsonInput, setJsonInput] = useState(JSON.stringify(legitSample, null, 2));
   const [result, setResult] = useState(null);
